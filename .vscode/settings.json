@@ -12,5 +12,8 @@
         "string_view": "cpp",
         "tuple": "cpp",
         "random": "cpp"
+    },
+    "files.exclude": {
+        "**/**.out": true
     }
 }
