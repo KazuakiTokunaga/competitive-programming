@@ -1,4 +1,4 @@
-// 木上の動的計画法
+// 木上の動的計画法(各頂点の深さと部分木のサイズを求める)
 
 #include <bits/stdc++.h>
 using namespace std;

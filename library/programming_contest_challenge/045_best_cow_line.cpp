@@ -34,3 +34,8 @@ int main() {
 
     cout << res << endl;
 }
+
+/*
+6
+ACDBCB
+*/

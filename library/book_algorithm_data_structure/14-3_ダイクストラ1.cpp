@@ -1,4 +1,6 @@
-// ダイクストラ法（ヒープ）
+// ダイクストラ法
+// 負辺がない場合のみ. 計算量はO(V^2). 
+// 辺が多いグラフではヒープを使うよりも有利
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -33,24 +35,27 @@ int main() {
         G[a].push_back(Edge(b,w));
     }
 
+    vector<bool> used(n, false);
     vector<ll> dist(n, INF);
     dist[s] = 0;
 
-    priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> que;
-    que.push(make_pair(dist[s], s));
+    for (int iter = 0; iter < n; iter++) {
+        ll min_dist = INF;
+        int min_v = -1;
 
-    while (!que.empty()) {
-        int v = que.top().second;
-        ll d = que.top().first;
-        que.pop();
-
-        if (d > dist[v]) continue;
-
-        for (auto e: G[v]) {
-            if (chmin(dist[e.to], dist[v] + e.w)) {
-                que.push(make_pair(dist[e.to], e.to));
+        for (int v = 0; v < n; v++) {
+            if (!used[v] && dist[v] <= min_dist){
+                min_dist = dist[v];
+                min_v = v;
             }
-        }        
+        }
+
+        if (min_v == -1) break;
+
+        for (auto e: G[min_v]) {
+            chmin(dist[e.to], dist[min_v] + e.w);
+        }
+        used[min_v] = true;
     }
 
     for (int v = 0; v < n; v++) {

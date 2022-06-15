@@ -1,4 +1,5 @@
 // ベルマン・フォード法
+// 計算量はO(VE). 負辺があっても適用可能
 
 #include <bits/stdc++.h>
 using namespace std;
