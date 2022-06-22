@@ -11,7 +11,17 @@
         "unordered_set": "cpp",
         "string_view": "cpp",
         "tuple": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "vector": "cpp",
+        "initializer_list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp"
     },
     "files.exclude": {
         "**/**.out": true

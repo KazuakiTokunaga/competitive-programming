@@ -16,7 +16,7 @@ void init() {
 
 ll inv(ll x) {
     ll res = 1;
-    ll k = MOD - 2;
+    ll k = MOD - 2; // MODを変えれば他の法に対する逆元を出力する
     ll y = x;
     while (k) {
         if (k & 1) res = (res * y) % MOD;

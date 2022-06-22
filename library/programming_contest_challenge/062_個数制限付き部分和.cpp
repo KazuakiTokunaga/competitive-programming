@@ -1,3 +1,4 @@
+// i番目まででjを作る際に余る最大のi番目の個数でDPしていく
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;

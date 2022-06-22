@@ -57,4 +57,11 @@ int main() {
     do {
         for (auto i: v5) {cout << i << ' ';} cout << endl;
     } while(next_permutation(v5.begin(), v5.end()));
+
+    // 要素を検索して削除：Erase-remove idiom
+    // https://www.delftstack.com/ja/howto/cpp/remove-element-from-vector-cpp/
+    vector<string> str_vec = {"map", "vector", "deque", "list", "set", "map", "stack", "queue", "map", "span"};
+    str_vec.erase(remove(str_vec.begin(), str_vec.end(), "map"), str_vec.end());
+    for (auto i: str_vec) {cout << i << ' ';} cout << endl;
+    
 }
