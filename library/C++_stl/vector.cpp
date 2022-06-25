@@ -17,6 +17,14 @@ int main() {
     copy(v1.begin(), v1.begin()+3, back_inserter(v2)); // サブベクトルを、既存のベクトルの末尾に加える
     for (auto i: v2) {cout << i << ' ';} cout << endl;
 
+    // lower_boundを降順の配列に用いる
+    // 降順を崩さないようにキーを挿入した時のキーのindexが与えられる
+    // https://qiita.com/lndclt/items/622f81925e10badf2afe
+    cout << "降順のlower_bound: " << endl;
+    vector<int> v = {5, 3, 3, 3, 2, 2, 1};
+    cout << lower_bound(v.begin(), v.end(), 2, greater<int>()) - v.begin() << endl; // 4
+    cout << upper_bound(v.begin(), v.end(), 2, greater<int>()) - v.begin() << endl; // 6
+    cout << endl;
 
     //検索
     // https://qiita.com/e869120/items/518297c6816adb67f9a5#3-22-find

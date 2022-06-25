@@ -8,6 +8,7 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-	vector<int> a = {1,2,3,4,5,6,7};
-	cout << lower_bound(all(a), 2) - a.begin() << endl;
+	pii p1 = {1, 1};
+	pii p2 = {1, 0};
+	cout << max(p1, p2).first << " " << max(p1, p2).second << endl;
 }

@@ -52,11 +52,11 @@ int main() {
     int n = 16;
     RMQ<int> rmq(n);
 
-    vector<int> dp = {4,3,5,6,2,5,1,3,5,6,8,10,15,12,8,13};
+    vector<int> dp = {0,3,5,6,2,5,1,3,5,6,8,10,15,12,8,13};
     rep(i, 0, n){
         rmq.update(i, dp[i]);
     }
 
-    cout << rmq.query(8, 17) << endl; // 8番目から16番目までの最小値 = 5
+    cout << rmq.query(0, 17) << endl; // 8番目から16番目までの最小値 = 5
     cout << rmq.query(12, 17) << endl; // 12番目から17番目までの最小値 = 8
 }
