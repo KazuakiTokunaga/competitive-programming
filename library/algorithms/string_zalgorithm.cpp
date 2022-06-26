@@ -1,4 +1,5 @@
 // https://sen-comp.hatenablog.com/entry/2020/01/16/174230
+// 全てのiについて、文字列全体とi文字目以降の部分文字列が、何文字まで一致するかをO(S)で出力する
 
 #include <iostream>
 #include <vector>

@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -8,7 +7,5 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-	pii p1 = {1, 1};
-	pii p2 = {1, 0};
-	cout << max(p1, p2).first << " " << max(p1, p2).second << endl;
+	cout << max(1,2,3) << endl;
 }
