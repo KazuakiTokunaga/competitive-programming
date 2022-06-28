@@ -14,13 +14,14 @@ void init() {
     rep(i, 1, 1010100) f[i] = (f[i - 1] * i) % MOD;
 }
 
-ll inv(ll x) {
+// 法mでのxの逆元を求める（mは素数）
+ll inv(ll x, ll m) {
     ll res = 1;
-    ll k = MOD - 2; // MODを変えれば他の法に対する逆元を出力する
+    ll k = m - 2;
     ll y = x;
     while (k) {
-        if (k & 1) res = (res * y) % MOD;
-        y = (y * y) % MOD;
+        if (k & 1) res = (res * y) % m;
+        y = (y * y) % m;
         k /= 2;
     }
     return res;
@@ -33,7 +34,7 @@ ll C(int n, int k) {
 
     ll bc = (b * c) % MOD;
 
-    return (a * inv(bc)) % MOD;
+    return (a * inv(bc, MOD)) % MOD;
 }
 
 int main() {

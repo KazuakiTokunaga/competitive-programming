@@ -1,4 +1,4 @@
-// 行列累乗
+// 行列累乗（二次元行列）
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
