@@ -11,13 +11,17 @@ int main() {
 
     if (itr1 == Set.end()) cout << "End" << endl;
     else cout << (*itr1) << endl;
-
-    Set.erase(37); 
-    Set.insert(46); // その時点での Set の要素は {15, 46}
+ 
+    Set.insert(23); Set.insert(32); Set.insert(46); // その時点での Set の要素は {15, 23, 32, 46}
     auto itr2 = Set.lower_bound(20); //20以上の最小の要素を指すイテレータ
-
     if (itr2 == Set.end()) cout << "End" << endl;
     else cout << (*itr2) << endl;
+
+    auto iter1 = Set.lower_bound(20);
+    auto iter2 = Set.lower_bound(35);
+    Set.erase(iter1, iter2); // 20以上の最小の要素から、35以上の最小の要素の1つ前の値までを消去する
+    for (auto i: Set) {cout << i << ' ';} cout << endl;
+    
 
     // 例 2: a[1],a[2],...,a[N] を小さい順に出力する（同じ要素が複数ある場合 1 回だけ出力する）
     set<int> b;

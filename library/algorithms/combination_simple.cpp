@@ -9,6 +9,7 @@ using namespace std;
 ll memo[CMAX][CMAX];
 int noinit = 1;
 ll C(ll a, ll b) {
+    if (a<b or a < 0) return 0;
 	if (noinit) {
 		rep(i, 0, CMAX) rep(j, 0, CMAX) memo[i][j] = -1;
 		noinit = 0;

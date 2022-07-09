@@ -21,6 +21,7 @@ void init(ll k) {
 }
 
 ll C(ll n, ll k) {
+    if (n < k or n < 0) return 0;
     ll ans = 1;
     for (int i = n; i >= n - k + 1; i--) {
         ans *= i;

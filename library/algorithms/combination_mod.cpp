@@ -28,6 +28,8 @@ ll inv(ll x, ll m) {
 }
 
 ll C(int n, int k) {
+    if (n < k or n < 0) return 0;
+
     ll a = f[n]; // = n!
     ll b = f[n-k]; // = (n-k)!
     ll c = f[k]; // = k!

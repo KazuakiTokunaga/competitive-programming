@@ -6,13 +6,10 @@ using pii = pair<int, int>;
 #define rrep(i,a,b) for(int i=a;i>=b;i--)
 #define all(x) (x).begin(),(x).end()
 
-#include <bits/stdc++.h>
-using namespace std;
-
-
 int main() {
-    string s, t;
-    s = "hoge";
-    t = "fuga";
-    cout << s + t << endl;
+    int N;
+    cin >> N;
+    
+    int res = 0;
+    cout << res << endl;
 }
