@@ -14,6 +14,7 @@ ll C(ll a, ll b) {
 		rep(i, 0, CMAX) rep(j, 0, CMAX) memo[i][j] = -1;
 		noinit = 0;
 	}
+    if (a <= 0 or b < 0) return 0;
 	if (b == 0 || a == b) return 1;
 	if (0 <= memo[a][b]) return memo[a][b];
 	return memo[a][b] = C(a - 1, b - 1) + C(a - 1, b);

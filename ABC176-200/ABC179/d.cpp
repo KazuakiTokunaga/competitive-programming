@@ -1,3 +1,5 @@
+// 最初に思いついたが複雑な解法
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -28,24 +30,20 @@ int main() {
         rep(j, 0, k){
             pii p = lr[j];
             int start = i - p.first;
-            // if (i == 4 and j == 0) cout << start << " " << dp[start][j] << endl;
+            
+            // (start~len) ~ startからj番目の区間の数を利用してiに至る場合の下図を加える。dp[i]][k]は到達方法の合計数
             if (start >= 1) dp[i][k] += dp[start][j], dp[i][k] %= MOD;
+
             accum[i] = dp[i][k] + accum[i-1], accum[i] %= MOD;
         };
         rep(j, 0, k){
             pii p = lr[j];
             int len = lens[j];
             int finish = max(0, i-len);
-            // if (i == 3 and j == 0) cout << finish << " " << accum[i] << " " << accum[finish] << endl;
-            dp[i][j] = accum[i] - accum[finish];
+            dp[i][j] = accum[i] - accum[finish]; // j番目の区間の長さをlenとすると、(i-len)からiまでの到達方法の合計を記録しておく
             while (dp[i][j] < 0) dp[i][j] += MOD;
-            
         }
-        // cout << "i = " << i << ": ";
-        // for (auto i: dp[i]) {cout << i << ' ';} cout << endl;
     }
-    // cout << "accum: ";
-    // for (auto i: accum) {cout << i << ' ';} cout << endl;
     
     cout << dp[n][k] << endl;
 }

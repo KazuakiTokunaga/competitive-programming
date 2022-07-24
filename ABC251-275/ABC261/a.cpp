@@ -7,14 +7,14 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    map<vector<int>, int> M;
-    vector<int> a = {1,2,3};
-    vector<int> b = {2,3,4};
-    vector<int> c = {1,2,3};
-    M[a]++;
-    M[b]++;
-    M[c]++;
-    cout << M[a] << endl;
-    cout << M[b] << endl;
+    int L1, R1, L2, R2;
+    cin >> L1 >> R1 >> L2 >> R2;
     
+    if (L1 > L2){
+        swap(L1, L2);
+        swap(R1, R2);
+    }
+
+    if (R2 < R1) cout << R2 - L2 << endl;
+    else cout << max(0, R1 - L2) << endl;
 }

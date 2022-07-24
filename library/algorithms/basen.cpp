@@ -19,19 +19,19 @@ vector<ll> convert(ll n, int base){
     return Y;
 }
 
-// base進数での比較
+// base進数での比較(return true iff a <= b)
 bool compare(vector<ll> a, vector<ll> b){
     if (a.size() < b.size()) return true;
     else if (a.size() > b.size()) return false;
 
     rep(i, 0, a.size()){
-        int x = a[i], y = b[i];
+        ll x = a[i], y = b[i];
         if (x == y) continue;
         else if (x < y)  return true;
         else return false;
     }
 
-    // このときX == Y
+    // このときa == b
     return true;
 }
 

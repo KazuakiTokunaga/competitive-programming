@@ -12,7 +12,7 @@ int main() {
     // 単純な処理であれば10^7 (=1000万)台については2秒に間に合う。10^8を超えると間に合わない。
     int ti = clock();
     ll a = 0;
-    for (ll i = 1; i <= pow(10,7); i++) {a *= i; a %= MOD;}
+    for (ll i = 1; i <= pow(10,8); i++) {a *= i; a %= MOD;}
     printf("Execution Time: %.4lf sec\n", 1.0 * (clock() - ti) / CLOCKS_PER_SEC);
     
     return 0;
