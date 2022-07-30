@@ -6,6 +6,7 @@
 using namespace std;
 #define ll long long
 const ll INF = 1LL << 60;
+template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return true; } return false;}
 
 struct Edge {
     int to;
@@ -14,15 +15,6 @@ struct Edge {
 };
 
 using Graph = vector<vector<Edge>>;
-
-template<class T> bool chmin(T& a, T b){
-    if (a>b) {
-        a = b;
-        return true;
-    } else {
-        return false;
-    }
-}
 
 int main() {
     int n, m, s;

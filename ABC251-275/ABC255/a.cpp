@@ -7,6 +7,16 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string s(3, 'a');
-    cout << s << endl;
+    int R, C;
+    cin >> R >> C; R--; C--;
+
+    vector<vector<int>> A(2);
+    rep(i, 0, 2){
+        int a1, a2;
+        cin >> a1 >> a2;
+        A[i].push_back(a1);
+        A[i].push_back(a2);
+    }
+
+    cout << A[R][C] << endl;
 }

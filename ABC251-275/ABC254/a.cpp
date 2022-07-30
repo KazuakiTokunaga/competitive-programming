@@ -7,6 +7,8 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string s(3, 'a');
-    cout << s << endl;
+    string N;
+    cin >> N;
+    
+    cout << N.substr(1) << endl;
 }

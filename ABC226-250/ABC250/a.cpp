@@ -7,6 +7,13 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string s(3, 'a');
-    cout << s << endl;
+    int H, W, R, C;
+    cin >> H >> W >> R >> C;
+
+    int res = 4;
+    if (H == 1) res--;
+    if (W == 1) res--;
+    if (R == 1 or R == H) res--;
+    if (C == 1 or C == W) res--;
+    cout << res << endl;
 }

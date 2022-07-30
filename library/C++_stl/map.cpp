@@ -35,4 +35,15 @@ int main() {
     if (auto iter = mp.find("hoge"); iter != mp.end()){
         cout << "gagaは存在しません" << endl;
     }
+
+    // 最初の要素、最後の要素
+    map<int, int> cnt;
+    cnt[3] = 4;
+    cnt[2] = 5;
+    cnt[6] = 2;
+    cnt[1] = 3;
+    cout << "minimum key: " << cnt.begin()->first << endl;
+    cout << "maximum key: " << (--cnt.end())->first << endl;
+    cnt.erase(1);
+    cout << "minimum element: " << cnt.begin()->first << "->" << cnt.begin()->second << endl;
 }

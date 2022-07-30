@@ -7,6 +7,10 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string s(3, 'a');
-    cout << s << endl;
+    int a, b, c;
+    cin >> a >> b >> c;
+    
+    if (a <= b and b <= c) cout << "Yes" << endl;
+    else if (a >= b and b >= c) cout << "Yes" << endl;
+    else cout << "No" << endl;
 }

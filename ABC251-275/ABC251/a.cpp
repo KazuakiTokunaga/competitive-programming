@@ -7,6 +7,13 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string s(3, 'a');
-    cout << s << endl;
+    string s;
+    cin >> s;
+    
+    int n = s.size();
+    string res = "";
+    rep(i, 0, 6){
+        res += s[i % n];
+    }
+    cout << res << endl;
 }

@@ -29,7 +29,9 @@
         "__tree": "cpp",
         "filesystem": "cpp",
         "map": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp"
     },
     "files.exclude": {
         "**/**.out": true
