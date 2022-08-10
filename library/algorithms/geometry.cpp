@@ -11,24 +11,8 @@ using pii = pair<int, int>;
 #define rep(i,a,b) for(int i=a;i<b;i++)
 #define rrep(i,a,b) for(int i=a;i>=b;i--)
 #define all(x) (x).begin(),(x).end()
-
-template<class T> bool chmin(T& a, T b){
-    if (a>b) {
-        a = b;
-        return true;
-    } else {
-        return false;
-    }
-}
-
-template<class T> bool chmax(T& a, T b){
-    if (a<b) {
-        a = b;
-        return true;
-    } else {
-        return false;
-    }
-}
+template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return true; } return false;}
+template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return true; } return false;}
 
 namespace geometry {
     // Point : 複素数型を位置ベクトルとして扱う

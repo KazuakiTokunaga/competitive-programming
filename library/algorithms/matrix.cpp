@@ -200,7 +200,7 @@ public:
 };
 
 int main() {
-    // 3次元行列を作成
+    // 3*3行列を作成
     Matrix<int> a(3);
     rep(i, 0, 3) rep(j, 0, 3) a[i][j] = (i+1) * (j+1);
     rep(i, 0, 3) { for (auto j: a[i]) {cout << j << ' ';} cout << endl;}
