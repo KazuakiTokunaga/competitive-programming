@@ -7,7 +7,11 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string a = "ABCDE";
-    reverse(all(a));
-    cout << a << endl;
+    int R, C;
+    cin >> R >> C; R--; C--;
+    
+    int r = min(R, 14-R);
+    int c = min(C, 14-C);
+    if (min(r, c) % 2) cout << "white" << endl;
+    else cout << "black" << endl;
 }

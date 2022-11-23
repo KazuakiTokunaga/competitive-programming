@@ -7,7 +7,10 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string a = "ABCDE";
-    reverse(all(a));
-    cout << a << endl;
+    int L, R;
+    cin >> L >> R; L--; R--;
+
+    string s = "atcoder";
+    rep(i, L, R+1) cout << s[i];
+    cout << endl;
 }

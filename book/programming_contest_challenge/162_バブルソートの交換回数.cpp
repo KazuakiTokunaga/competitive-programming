@@ -15,7 +15,7 @@ struct BIT {
     BIT(int n_) : n(n_ + 1), bit(n, 0) {}
 
     void add(int i, T x) {
-        for (int idx = i; idx < n; idx += (idx & -idx)) {
+        for (int idx = i; idx < n; idx += (idx & -idx)) { // i&-1はiの最後の1のビットを表す(p.144)
             bit[idx] += x;
         }
     }

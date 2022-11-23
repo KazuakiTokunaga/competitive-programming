@@ -7,7 +7,14 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string a = "ABCDE";
-    reverse(all(a));
-    cout << a << endl;
+    string N;
+    cin >> N;
+    reverse(all(N));
+
+    int res = 0;
+    rep(i, 0, N.size()){
+        int s = int(N[i]-'0');
+        res += s * (1<<i);
+    }
+    cout << res << endl;
 }

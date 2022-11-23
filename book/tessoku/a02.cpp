@@ -7,7 +7,15 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string a = "ABCDE";
-    reverse(all(a));
-    cout << a << endl;
+    int N, X;
+    cin >> N >> X;
+
+    rep(i, 0, N) {
+        int A;
+        cin >> A;
+        if (A==X) {cout << "Yes" << endl; return 0;}
+    }
+    
+    cout << "No" << endl;
+
 }

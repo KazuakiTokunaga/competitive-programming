@@ -7,7 +7,9 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string a = "ABCDE";
-    reverse(all(a));
-    cout << a << endl;
+    string S;
+    cin >> S;
+
+    int n = S.size();
+    cout << S[(n-1)/2] << endl;
 }

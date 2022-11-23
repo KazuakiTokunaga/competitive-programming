@@ -7,7 +7,10 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string a = "ABCDE";
-    reverse(all(a));
-    cout << a << endl;
+    int X, Y, N;
+    cin >> X >> Y >> N;
+    
+    int a = Y * (N / 3) + X * (N % 3);
+    int b = X * N;
+    cout << min(a, b) << endl;
 }

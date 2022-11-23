@@ -7,7 +7,15 @@ using pii = pair<int, int>;
 #define all(x) (x).begin(),(x).end()
 
 int main() {
-    string a = "ABCDE";
-    reverse(all(a));
-    cout << a << endl;
+    string s;
+    cin >> s;
+
+    map<string, int> mp;
+    mp["Friday"] = 1;
+    mp["Thursday"] = 2;
+    mp["Wednesday"] = 3;
+    mp["Tuesday"] = 4;
+    mp["Monday"] = 5;
+
+    cout << mp[s] << endl;
 }
